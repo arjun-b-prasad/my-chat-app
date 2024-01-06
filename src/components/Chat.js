@@ -17,7 +17,7 @@ const Chat = ({ user }) => {
     const sendMessage = async (e) => {
         e.preventDefault();
         if (message.trim() === "") {
-            alert("Message fields are empty! 🙏😂😁 Please type a message.");
+            alert("Message feild is empty guru! 🙏😂😁 enadru type madappa bega");
             return;
         }
         const { uid, photoURL } = user;

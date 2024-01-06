@@ -86,6 +86,7 @@ form input
 
 .sender p
 {
+    box-shadow: 0 0 15px 5px #079dee;
     color: white;
     border-radius: 20px;
     background-color: rgb(25, 79, 196);
