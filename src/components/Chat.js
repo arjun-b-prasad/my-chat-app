@@ -11,7 +11,7 @@ const Chat = ({ user }) => {
     const [message, setMessage] = useState("");
     const dummy = useRef()
     const messageRef = firestore.collection('messages');
-    const query = messageRef.orderBy("createdAt").limit(25)
+    const query = messageRef.orderBy("createdAt").limit(250)
     const [messages] = useCollectionData(query, { idField: "id" })
     const sendMessage = async (e) => {
         e.preventDefault();
