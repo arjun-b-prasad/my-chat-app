@@ -1,6 +1,6 @@
 .chat-window
 {
-    height: 85vh;
+    height: 83vh;
     padding: 10px;
     margin: 2vh 0 2vh;
     background-image: url(../asset/chat-background.jpg);
@@ -49,7 +49,7 @@ form input
 {
     line-height: 1.5;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.2rem;
     background-color: white;
     color: black;
     outline: 0;
