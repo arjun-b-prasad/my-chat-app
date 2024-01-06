@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/Header';
+import Signin from './components/Signin';
+import Chat from './components/Chat';
 import './App.css';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import { useAuthState } from 'react-firebase-hooks/auth'
+
+// Replace the process.env variables with your own keys
+firebase.initializeApp({
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+  measurementId: process.env.REACT_APP_measurementId
+})
+const auth = firebase.auth();
 
 function App() {
+  const [user] = useAuthState(auth)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <section>
+        <Header auth={auth} user={user} />
+        {" "}
+        {user ? <Chat user={user} /> : <Signin auth={auth} />}
+      </section>
     </div>
   );
 }

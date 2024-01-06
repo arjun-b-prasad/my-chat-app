@@ -1,0 +1,100 @@
+.chat-window
+{
+    height: 85vh;
+    padding: 10px;
+    margin: 2vh 0 2vh;
+    background-image: url(../asset/chat-background.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+}
+
+form 
+{
+    height: 7.5vh;
+    position: fixed;
+    bottom: 0;
+    background-color: lightslategrey;
+    width: 100%;
+    left: 0px;
+    /* max-width: 1000px; */
+    font-size: 1.5rem;
+    display: flex;
+}
+
+form button
+{
+    cursor: pointer;
+    /* background-color: rgb(0, 153, 255); */
+    background: rgb(163,212,255);
+    background: linear-gradient(170deg, rgba(163,212,255,1) 35%, rgba(96,106,234,1) 100%);
+    width: 10%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form button img
+{
+    
+    width: 40px;
+    height: 40px;
+}
+
+form input
+{
+    line-height: 1.5;
+    width: 100%;
+    font-size: 2rem;
+    background-color: white;
+    color: black;
+    outline: 0;
+    border: none;
+    padding: 0 10px;
+}
+
+.message
+{
+    display: flex;
+    align-items: center;
+}
+
+.message img
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+}
+
+.message p
+{
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+}
+
+.sender
+{
+    flex-direction: row-reverse;
+}
+
+.sender p
+{
+    color: white;
+    border-radius: 20px;
+    background-color: rgb(25, 79, 196);
+    align-self: flex-end;
+}
+
+.receiver p 
+{
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
