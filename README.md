@@ -8,4 +8,4 @@ npm install
 npm start
 ```
 -----------------------------------------------------------------------------------------------------
-### Take a look at the demo of this project [here](https://my-chat-app-tan.vercel.app/).
+### Check out the live demo of the project [here](https://my-chat-app-tan.vercel.app/).
