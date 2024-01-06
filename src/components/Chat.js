@@ -16,8 +16,11 @@ const Chat = ({ user }) => {
     const [messages] = useCollectionData(query, { idField: "id" })
     const sendMessage = async (e) => {
         e.preventDefault();
+        if (message.trim() === "") {
+            alert("Message feilds are empty guru! 🙏😂😁 enadru type madappa bega");
+            return;
+        }
         const { uid, photoURL } = user;
-
         await messageRef.add({
             text: message,
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
